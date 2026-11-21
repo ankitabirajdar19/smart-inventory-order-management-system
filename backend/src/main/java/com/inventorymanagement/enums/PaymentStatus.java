@@ -1,0 +1,3 @@
+package com.inventorymanagement.enums;
+
+public enum PaymentStatus { INITIATED, PENDING, SUCCESS, FAILED, REFUNDED, PARTIALLY_REFUNDED }

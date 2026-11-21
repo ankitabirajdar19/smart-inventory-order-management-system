@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Design tokens: every colour in the UI comes from these variables ---- */
+:root {
+  --app: #F6F7FB;  --surface: #FFFFFF;  --sidebar: #FFFFFF;  --subtle: #F1F3F9;
+  --fg: #172033;   --muted: #64748B;    --line: #E5E9F0;
+  --accent: #4F46E5;  --accent-fg: #FFFFFF;  --accent-soft: #EEF0FF;
+  --success: #16A34A; --success-soft: #E8F7EE;
+  --warning: #D97706; --warning-soft: #FDF3E3;
+  --danger: #DC2626;  --danger-soft: #FCEBEB;
+  --info: #0284C7;    --info-soft: #E6F3FA;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.05);
+  --shadow-pop: 0 8px 24px rgb(16 24 40 / 0.12);
+  color-scheme: light;
+}
+.dark {
+  --app: #0B1120;  --surface: #151F32;  --sidebar: #111827;  --subtle: #1B2740;
+  --fg: #F8FAFC;   --muted: #94A3B8;    --line: #263247;
+  --accent: #818CF8;  --accent-fg: #0B1120;  --accent-soft: #232B54;
+  --success: #4ADE80; --success-soft: #12301F;
+  --warning: #FBBF24; --warning-soft: #3A2B0E;
+  --danger: #F87171;  --danger-soft: #3A1616;
+  --info: #38BDF8;    --info-soft: #0F2A3A;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+  --shadow-pop: 0 8px 24px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-app: var(--app);
+  --color-surface: var(--surface);
+  --color-sidebar: var(--sidebar);
+  --color-subtle: var(--subtle);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-card: var(--shadow);
+  --shadow-pop: var(--shadow-pop);
+}
+
+html, body, #root { min-height: 100%; }
+body { background: var(--app); color: var(--fg); font-family: var(--font-sans); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+::selection { background: var(--accent-soft); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

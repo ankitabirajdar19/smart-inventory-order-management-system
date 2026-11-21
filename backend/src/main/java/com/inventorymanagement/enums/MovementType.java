@@ -1,0 +1,3 @@
+package com.inventorymanagement.enums;
+
+public enum MovementType { PURCHASE_IN, SALE_OUT, RESERVATION, RESERVATION_RELEASE, RETURN_IN, ADJUSTMENT_IN, ADJUSTMENT_OUT, TRANSFER_IN, TRANSFER_OUT }

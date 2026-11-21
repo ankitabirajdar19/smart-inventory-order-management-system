@@ -1,0 +1,5 @@
+app:
+  dev-seed.password: Password@123      # LOCAL DEV ONLY
+  payment.allow-simulation: true
+  cookie.secure: false
+logging.level.com.inventorymanagement: DEBUG
